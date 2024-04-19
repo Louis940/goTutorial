@@ -14,8 +14,11 @@ func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
 
-	// Get a greeting message
-	message, err := greetings.Hello("Gladys")
+	// a slice of names
+	names := []string{"Louis", "Abi", "Ciaran", "Lola", "Phoebe"}
+
+	// Get a greeting message for each name
+	messages, err := greetings.Hellos(names)
 	// If an error was returned , print it to the console and
 	// exit the program
 	if err != nil {
@@ -23,5 +26,5 @@ func main() {
 	}
 
 	// if no error was returned, print the returned message to the console.
-	fmt.Println(message)
+	fmt.Println(messages)
 }
